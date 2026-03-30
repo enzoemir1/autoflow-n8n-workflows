@@ -1,55 +1,134 @@
 <p align="center">
-  <h1 align="center">AutoFlow — Free AI Automation Workflows for n8n</h1>
-  <p align="center">
-    8 ready-to-import workflow templates that automate content, sales, support, email, and more.
-    <br />
-    Built by <a href="https://automatiabcn.com">Automatia BCN</a> · Barcelona
-  </p>
+  <img src="assets/banner.png" alt="AutoFlow — Free AI Automation Workflows for n8n" width="100%">
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/workflows-8-00D9FF?style=for-the-badge" alt="8 Workflows">
   <img src="https://img.shields.io/badge/platform-n8n-FF6D5A?style=for-the-badge" alt="n8n">
   <img src="https://img.shields.io/badge/AI-OpenAI%20gpt--4o--mini-10B981?style=for-the-badge" alt="OpenAI">
-  <img src="https://img.shields.io/badge/cost-free-FFD700?style=for-the-badge" alt="Free">
+  <img src="https://img.shields.io/badge/license-MIT-FFD700?style=for-the-badge" alt="MIT">
+  <img src="https://img.shields.io/github/stars/enzoemir1/autoflow-n8n-workflows?style=for-the-badge&color=FFD700" alt="Stars">
+</p>
+
+<p align="center">
+  <strong>8 free, production-ready n8n workflow templates for AI automation.</strong>
+  <br />
+  Content repurposing · Lead generation · Email classifier · RAG chatbot · Social monitor · Client onboarding · Web scraping · Voice assistant
+  <br /><br />
+  Built by <a href="https://automatiabcn.com">Automatia BCN</a> · Barcelona
 </p>
 
 ---
 
 ## What's Included
 
-| # | Workflow | What It Does | API Cost |
-|---|---------|-------------|----------|
-| 1 | **FlowScribe Lite** | 1 blog post → 4 platform posts (Twitter, LinkedIn, Instagram, Facebook) | ~$0.01/run |
-| 2 | **LeadPilot Lite** | Paste leads → AI writes personalized cold emails | ~$0.005/lead |
-| 3 | **SupportFlow Lite** | Simple AI chatbot (answers from your company info) | ~$0.002/msg |
-| 4 | **InboxZero Lite** | Classifies Gmail emails as urgent / important / info / spam | ~$0.002/email |
-| 5 | **SocialPulse Lite** | Monitors Reddit for trending posts + AI analysis | ~$0.03/scan |
-| 6 | **ClientFlow Lite** | Client form → welcome email + Google Sheets pipeline | ~$0.003/client |
-| 7 | **DataForge Lite** | POST any URL → AI extracts structured data | ~$0.003/page |
-| 8 | **VoiceAgent Lite** | Logs phone calls from Vapi.ai/Bland.ai to Sheets | Free |
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="assets/flowscribe-thumb.png" width="120" alt="FlowScribe"><br />
+<strong>FlowScribe Lite</strong><br />
+<sub>1 content → 4 platforms</sub>
+</td>
+<td align="center" width="25%">
+<img src="assets/leadpilot-thumb.png" width="120" alt="LeadPilot"><br />
+<strong>LeadPilot Lite</strong><br />
+<sub>AI cold email writer</sub>
+</td>
+<td align="center" width="25%">
+<img src="assets/supportflow-thumb.png" width="120" alt="SupportFlow"><br />
+<strong>SupportFlow Lite</strong><br />
+<sub>AI chatbot (no RAG)</sub>
+</td>
+<td align="center" width="25%">
+<img src="assets/inboxzero-thumb.png" width="120" alt="InboxZero"><br />
+<strong>InboxZero Lite</strong><br />
+<sub>Email classifier</sub>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="assets/socialpulse-thumb.png" width="120" alt="SocialPulse"><br />
+<strong>SocialPulse Lite</strong><br />
+<sub>Reddit trend monitor</sub>
+</td>
+<td align="center">
+<img src="assets/clientflow-thumb.png" width="120" alt="ClientFlow"><br />
+<strong>ClientFlow Lite</strong><br />
+<sub>Client onboarding</sub>
+</td>
+<td align="center">
+<img src="assets/dataforge-thumb.png" width="120" alt="DataForge"><br />
+<strong>DataForge Lite</strong><br />
+<sub>URL data extractor</sub>
+</td>
+<td align="center">
+<img src="assets/voiceagent-thumb.png" width="120" alt="VoiceAgent"><br />
+<strong>VoiceAgent Lite</strong><br />
+<sub>Call logger</sub>
+</td>
+</tr>
+</table>
 
 ---
 
 ## Quick Start
 
-### 1. Download a workflow
-Click any `.json` file in the [`workflows/`](./workflows) folder and download it (or clone this repo).
+```bash
+# 1. Clone this repo
+git clone https://github.com/enzoemir1/autoflow-n8n-workflows.git
 
-### 2. Import into n8n
+# 2. Import any JSON into n8n
+#    Workflows → Import from File → select a JSON from workflows/
+
+# 3. Connect your credentials
+#    Most need: OpenAI API key + Google Sheets
+
+# 4. Activate and test
 ```
-n8n → Workflows → Import from File → select the JSON
-```
 
-### 3. Connect your credentials
-Most workflows need:
-- **OpenAI API key** (gpt-4o-mini — [get one here](https://platform.openai.com/api-keys))
-- **Google Sheets** (OAuth in n8n)
+---
 
-Some also need Gmail (InboxZero, ClientFlow).
+## Workflow Details
 
-### 4. Activate
-Toggle the workflow active and test it. Each workflow has **Sticky Notes** inside explaining what every node does.
+### FlowScribe Lite — Content Repurposing
+Send a blog post via webhook → AI generates optimized content for **Twitter thread + LinkedIn post + Instagram caption + Facebook post** in parallel → saves to Google Sheets.
+
+**Cost:** ~$0.01/run | **Input:** Blog post via webhook | **Output:** 4 platform-specific posts
+
+### LeadPilot Lite — Cold Email Writer
+POST a list of leads → AI writes a **personalized cold email + follow-up** for each → saves to Sheets.
+
+**Cost:** ~$0.005/lead | **Input:** Lead list (name, email, title, company) | **Output:** Custom email per lead
+
+### SupportFlow Lite — AI Chatbot
+Simple chatbot that answers customer questions using your company info (set via environment variable). No vector database needed.
+
+**Cost:** ~$0.002/message | **Setup:** 2 minutes
+
+### InboxZero Lite — Email Classifier
+Polls Gmail every 5 minutes, classifies each new email into: **urgent, important, informational, or spam**. Logs to Sheets.
+
+**Cost:** ~$0.002/email | **Trigger:** Automatic (Gmail poll)
+
+### SocialPulse Lite — Reddit Monitor
+Fetches hot posts from a subreddit daily, ranks by engagement, **AI identifies trends + suggests content ideas**.
+
+**Cost:** ~$0.03/scan | **Data source:** Reddit (free, no API key needed)
+
+### ClientFlow Lite — Client Onboarding
+Webhook receives client form data → **sends welcome email** via Gmail → logs to Google Sheets pipeline.
+
+**Cost:** Free (no AI) | **Trigger:** Any form (Typeform, Google Forms, Tally)
+
+### DataForge Lite — URL Data Extractor
+POST a URL + fields to extract → fetches page → **AI extracts structured data** → returns JSON.
+
+**Cost:** ~$0.003/page | **Input:** Any URL | **Output:** Structured JSON
+
+### VoiceAgent Lite — Call Logger
+Receives call data from **Vapi.ai or Bland.ai** webhook → logs caller, duration, transcript to Sheets.
+
+**Cost:** Free | **Trigger:** Vapi/Bland webhook
 
 ---
 
@@ -57,127 +136,46 @@ Toggle the workflow active and test it. Each workflow has **Sticky Notes** insid
 
 | Requirement | Details |
 |------------|---------|
-| **n8n** | Cloud or self-hosted ([n8n.io](https://n8n.io)) |
-| **OpenAI API** | gpt-4o-mini, ~$0.002-0.01 per call ([platform.openai.com](https://platform.openai.com)) |
+| **n8n** | Cloud or self-hosted · [n8n.io](https://n8n.io) |
+| **OpenAI API** | gpt-4o-mini · ~$0.002-0.01/call · [Get key](https://platform.openai.com/api-keys) |
 | **Google Sheets** | Free Google account |
-| **Gmail** | For InboxZero + ClientFlow only |
-
-All workflows use the most cost-effective API options. No expensive models required.
-
----
-
-## Workflow Details
-
-### FlowScribe Lite — Content Repurposing
-Send a blog post via webhook → AI generates optimized content for 4 platforms in parallel → saves to Google Sheets.
-
-**Input:**
-```json
-{
-  "title": "Your Article Title",
-  "content": "Your full article text...",
-  "brand_voice": "professional yet approachable"
-}
-```
-
-**Output:** Twitter thread (5-7 tweets) + LinkedIn post + Instagram caption (with hashtags) + Facebook post.
-
----
-
-### LeadPilot Lite — Cold Email Writer
-POST a list of leads → AI writes a personalized cold email + follow-up for each → saves to Sheets.
-
-**Input:**
-```json
-{
-  "leads": [
-    { "name": "Jane Smith", "email": "jane@company.com", "title": "CTO", "company": "TechCo" }
-  ],
-  "sender_name": "Your Name",
-  "value_prop": "We help companies automate workflows."
-}
-```
-
----
-
-### SupportFlow Lite — AI Chatbot
-Simple chatbot that answers customer questions using your company info (set via environment variable). No vector database needed.
-
----
-
-### InboxZero Lite — Email Classifier
-Polls Gmail every 5 minutes, classifies each new email into: urgent, important, informational, or spam. Logs to Sheets.
-
----
-
-### SocialPulse Lite — Reddit Monitor
-Fetches hot posts from a subreddit daily, ranks by engagement, AI identifies trends + suggests content ideas.
-
----
-
-### ClientFlow Lite — Client Onboarding
-Webhook receives client form data → sends welcome email via Gmail → logs to Google Sheets pipeline.
-
----
-
-### DataForge Lite — URL Data Extractor
-POST a URL + fields to extract → fetches page → AI extracts structured data → returns JSON.
-
-```bash
-curl -X POST YOUR_WEBHOOK \
-  -H "Content-Type: application/json" \
-  -d '{"url": "https://example.com/pricing", "extract_fields": "plans,price,features"}'
-```
-
----
-
-### VoiceAgent Lite — Call Logger
-Receives call data from Vapi.ai or Bland.ai webhook → logs caller, duration, transcript to Sheets.
+| **Gmail** | InboxZero + ClientFlow only |
 
 ---
 
 ## Full Versions
 
-These are Lite versions of our **AutoFlow** product line. Each full version adds:
+These are Lite (free) versions. Full versions add more platforms, A/B testing, advanced analytics, and complete documentation.
 
-- More platforms / sources / integrations
-- A/B testing and advanced analytics
-- Complete documentation (6 guides per product)
-- Bonus templates and examples
-- Priority support
+| Product | Lite (Free) | Full Version |
+|---------|------------|-------------|
+| FlowScribe | 4 platforms | 8 platforms + A/B testing + posting schedule |
+| LeadPilot | Manual leads | Apollo.io search + AI scoring + auto-send |
+| SupportFlow | Simple chatbot | RAG (Pinecone) + human handoff + chat widget |
+| InboxZero | Classify + log | Auto-actions + draft replies + daily digest |
+| SocialPulse | Reddit only | Reddit + HN + Dev.to + weekly reports |
+| ClientFlow | Email + log | Stripe invoice + Calendar + 7-day follow-up |
+| DataForge | Single URL | Batch scraping + change tracking + reports |
+| VoiceAgent | Call logger | AI analysis + Calendar booking + Slack alerts |
 
-| Product | Price | What's Added |
-|---------|-------|-------------|
-| FlowScribe | $79 | 8 platforms + A/B testing + posting schedule |
-| LeadPilot | $99 | Apollo.io search + AI scoring + auto-send |
-| SupportFlow | $129 | RAG chatbot (Pinecone) + human handoff + chat widget |
-| InboxZero | $79 | Auto-actions + draft replies + daily digest |
-| SocialPulse | $89 | Reddit + HN + Dev.to + weekly reports |
-| ClientFlow | $99 | Stripe invoice + Calendar + 7-day follow-up |
-| DataForge | $129 | Batch scraping + change tracking + market reports |
-| VoiceAgent | $149 | AI call analysis + Calendar booking + Slack alerts |
-
-**Browse all products:** [automatiabcn.gumroad.com](https://automatiabcn.gumroad.com)
+**Full collection:** [automatiabcn.gumroad.com](https://automatiabcn.gumroad.com)
 
 ---
 
-## About Automatia BCN
+## About
 
-We're a Barcelona-based studio building AI automation products.
+Built by **Automatia BCN** — a Barcelona-based AI automation studio.
 
 - **Website:** [automatiabcn.com](https://automatiabcn.com)
 - **Products:** [automatiabcn.gumroad.com](https://automatiabcn.gumroad.com)
 - **Twitter/X:** [@automatiabcn](https://x.com/automatiabcn)
-- **Email:** support@automatiabcn.com
 
 ---
 
 ## License
 
-These workflow templates are free to use for personal and commercial purposes. You may modify them for your own use. You may not resell or redistribute the files themselves.
-
-Full product versions have their own license terms.
+MIT License — free for personal and commercial use.
 
 ---
 
-**If these workflows save you time, consider giving this repo a ⭐**
+**If these workflows save you time, a ⭐ would mean a lot!**
