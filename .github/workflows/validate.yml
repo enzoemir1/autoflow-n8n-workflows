@@ -1,0 +1,32 @@
+name: Validate Workflows
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Validate JSON files
+        run: |
+          echo "Validating n8n workflow JSON files..."
+          errors=0
+          for f in workflows/*.json; do
+            if python3 -c "import json; json.load(open('$f'))" 2>/dev/null; then
+              nodes=$(python3 -c "import json; d=json.load(open('$f')); print(len(d.get('nodes', [])))")
+              echo "✓ $f ($nodes nodes)"
+            else
+              echo "✗ $f — INVALID JSON"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "::error::$errors JSON file(s) failed validation"
+            exit 1
+          fi
+          echo "All workflow files are valid!"
