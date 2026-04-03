@@ -1,0 +1,17 @@
+{
+  "clientId": "CF-M4X7K9P2",
+  "client": {
+    "name": "Alex Rivera",
+    "email": "alex@designstudio.com",
+    "company": "Rivera Design Studio",
+    "projectType": "Website Redesign",
+    "budget": "$5,000",
+    "startDate": "2026-04-15"
+  },
+  "welcomeEmail": {
+    "subject": "Welcome aboard, Alex! Here's what's next",
+    "body": "Hi Alex,\n\nWelcome to the team! We're thrilled to kick off the Website Redesign project with Rivera Design Studio.\n\nHere's what to expect in the next few days:\n\n1. Kick-off Call — I'll send a calendar invite for next week to align on goals and timeline.\n2. Access — You'll receive login credentials for our project dashboard shortly.\n3. Timeline — Based on our discussion, we're targeting an April 15 start with a 4-week sprint.\n\nIn the meantime, feel free to reply to this email with any questions or materials you'd like us to review before we begin.\n\nLooking forward to creating something great together!\n\nBest regards,\nEnes\nAutomatia BCN"
+  },
+  "pipelineStatus": "onboarded",
+  "processedAt": "2026-04-01T11:22:00.000Z"
+}

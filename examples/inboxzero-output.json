@@ -1,0 +1,29 @@
+{
+  "processedAt": "2026-04-01T09:05:00.000Z",
+  "emails_classified": [
+    {
+      "from": "client@bigcorp.com",
+      "subject": "URGENT: Production server down",
+      "category": "urgent",
+      "reasoning": "Production outage reported by client, requires immediate attention"
+    },
+    {
+      "from": "partner@agency.com",
+      "subject": "Q2 Partnership Proposal",
+      "category": "important",
+      "reasoning": "Business development opportunity, should be reviewed within 24 hours"
+    },
+    {
+      "from": "newsletter@techcrunch.com",
+      "subject": "This Week in AI: New Models Released",
+      "category": "informational",
+      "reasoning": "Industry newsletter, read when convenient"
+    },
+    {
+      "from": "promo@randomstore.com",
+      "subject": "50% OFF EVERYTHING TODAY ONLY!!!",
+      "category": "spam",
+      "reasoning": "Promotional email, no business relevance"
+    }
+  ]
+}

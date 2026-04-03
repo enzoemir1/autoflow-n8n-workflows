@@ -1,0 +1,17 @@
+{
+  "requestId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+  "processedAt": "2026-04-01T14:15:00.000Z",
+  "leads": [
+    {
+      "name": "Sarah Chen",
+      "email": "sarah@techstartup.com",
+      "title": "CTO",
+      "company": "TechStartup Inc",
+      "email_generated": {
+        "subject": "Quick question about your engineering workflow, Sarah",
+        "body": "Hi Sarah,\n\nI noticed TechStartup Inc has been scaling quickly — congrats on the recent Series A.\n\nAs CTO, you're probably spending more time than you'd like on operational tasks that could be automated: deployment pipelines, incident routing, onboarding new engineers.\n\nWe help technical teams automate these workflows using n8n and AI, typically saving 10-15 hours per week. One recent client (similar stage, 30-person engineering team) cut their incident response time by 60%.\n\nWould a 15-minute call next week make sense to see if there's a fit?\n\nBest,\nEnes",
+        "followup": "Hi Sarah,\n\nJust floating this back up — I know CTOs have packed inboxes.\n\nHappy to share the case study I mentioned (the 60% incident response improvement) if that's useful, no call needed.\n\nEnes"
+      }
+    }
+  ]
+}

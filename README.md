@@ -162,6 +162,36 @@ These are Lite (free) versions. Full versions add more platforms, A/B testing, a
 
 ---
 
+## Documentation
+
+Each workflow has a detailed guide in the `docs/` folder:
+
+| Workflow | Guide |
+|----------|-------|
+| FlowScribe Lite | [docs/flowscribe-lite.md](docs/flowscribe-lite.md) |
+| LeadPilot Lite | [docs/leadpilot-lite.md](docs/leadpilot-lite.md) |
+| SupportFlow Lite | [docs/supportflow-lite.md](docs/supportflow-lite.md) |
+| InboxZero Lite | [docs/inboxzero-lite.md](docs/inboxzero-lite.md) |
+| SocialPulse Lite | [docs/socialpulse-lite.md](docs/socialpulse-lite.md) |
+| ClientFlow Lite | [docs/clientflow-lite.md](docs/clientflow-lite.md) |
+| DataForge Lite | [docs/dataforge-lite.md](docs/dataforge-lite.md) |
+| VoiceAgent Lite | [docs/voiceagent-lite.md](docs/voiceagent-lite.md) |
+
+Each guide includes: setup instructions, input parameters, cost estimates, and a comparison with the full version.
+
+---
+
+## Example Outputs
+
+See what each workflow produces in the `examples/` folder:
+
+- [flowscribe-output.json](examples/flowscribe-output.json) — Blog post repurposed into 4 platform posts
+- [leadpilot-output.json](examples/leadpilot-output.json) — AI-generated cold email + follow-up
+- [inboxzero-output.json](examples/inboxzero-output.json) — Classified emails with AI reasoning
+- [clientflow-output.json](examples/clientflow-output.json) — Complete onboarding flow output
+
+---
+
 ## About
 
 Built by **Automatia BCN** — a Barcelona-based AI automation studio.
