@@ -192,6 +192,22 @@ See what each workflow produces in the `examples/` folder:
 
 ---
 
+## Related Projects
+
+| Repo | Description |
+|------|-------------|
+| **[n8n-telegram-approval](https://github.com/enzoemir1/n8n-telegram-approval)** | Add human-in-the-loop approval to any n8n workflow via Telegram. Works great with FlowScribe for content review before publishing. |
+| **[free-ai-prompts](https://github.com/enzoemir1/free-ai-prompts)** | 90 free AI prompts across 9 categories — use them in the OpenAI nodes of these workflows. |
+| **[cacheflow-ai](https://github.com/enzoemir1/cacheflow-ai)** | Reduce AI API costs by 60-85% with smart caching — drop-in proxy for any OpenAI-compatible workflow. |
+
+---
+
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on submitting workflows, reporting bugs, and suggesting features.
+
+---
+
 ## About
 
 Built by **Automatia BCN** — a Barcelona-based AI automation studio.
