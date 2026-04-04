@@ -1,27 +1,44 @@
-# Contributing to AutoFlow
+# Contributing to AutoFlow n8n Workflows
 
-Thanks for your interest! Here's how you can help:
+Thanks for your interest in contributing! Whether it's a bug fix, new workflow, or documentation improvement — all contributions are welcome.
 
-## Reporting Issues
-- Use the bug report template for workflow problems
-- Include your n8n version and error messages
+## How to Contribute
 
-## Requesting Workflows
-- Use the workflow request template
-- Describe what you'd like automated
+### Report a Bug
+1. Open an [Issue](https://github.com/enzoemir1/autoflow-n8n-workflows/issues) with the **Bug Report** template
+2. Include your n8n version, the workflow name, and steps to reproduce
 
-## Submitting Improvements
-1. Fork this repo
-2. Create a branch (`git checkout -b improve-flowscribe`)
-3. Make your changes
-4. Test the workflow in n8n
-5. Submit a Pull Request
+### Suggest a Feature
+1. Open an [Issue](https://github.com/enzoemir1/autoflow-n8n-workflows/issues) with the **Feature Request** template
+2. Describe the use case and expected behavior
 
-## Guidelines
-- Workflows must be valid n8n JSON
-- Include Sticky Notes explaining nodes
-- Don't include API keys or credentials
-- Test on n8n v1.20+
+### Submit a Workflow
+1. Fork this repository
+2. Create a new branch: `git checkout -b add-my-workflow`
+3. Add your workflow JSON to the `workflows/` folder
+4. Add documentation to the `docs/` folder (follow existing format)
+5. Update `README.md` to include your workflow in the table
+6. Submit a Pull Request
+
+### Improve Documentation
+- Fix typos, clarify setup steps, add examples
+- PRs for documentation improvements are always appreciated
+
+## Workflow Guidelines
+
+When submitting a new workflow:
+
+- **Use gpt-4o-mini** as the default model (cost-effective)
+- **Include a webhook trigger** so users can test immediately
+- **Log outputs to Google Sheets** for easy verification
+- **Add clear comments** in n8n sticky notes within the workflow
+- **Test the workflow** on a fresh n8n instance before submitting
+- **Keep costs low** — aim for under $0.01 per execution
+
+## Code of Conduct
+
+Be respectful, constructive, and helpful. We're all here to build useful automations.
 
 ## Questions?
-Open a Discussion or reach out on Twitter [@automatiabcn](https://x.com/automatiabcn).
+
+Open an issue or reach out on [Twitter/X](https://x.com/automatiabcn).
