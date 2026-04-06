@@ -197,6 +197,7 @@ See what each workflow produces in the `examples/` folder:
 | Repo | Description |
 |------|-------------|
 | **[n8n-telegram-approval](https://github.com/enzoemir1/n8n-telegram-approval)** | Add human-in-the-loop approval to any n8n workflow via Telegram. Works great with FlowScribe for content review before publishing. |
+| **[leadpipe-mcp](https://github.com/enzoemir1/leadpipe-mcp)** | AI lead qualification MCP server — ingest, enrich, score 0-100, export to HubSpot/Pipedrive/Sheets. [MCPize](https://mcpize.com/mcp/leadpipe-mcp). |
 | **[n8n-prompt-library](https://github.com/enzoemir1/n8n-prompt-library)** | 20 production-ready AI prompts for n8n workflows — content generation, data processing, email, classification, support, SEO. |
 | **[n8n-cost-calculator](https://github.com/enzoemir1/n8n-cost-calculator)** | Estimate AI workflow costs before you build — compare 10 models, use presets, [live demo](https://enzoemir1.github.io/n8n-cost-calculator/). |
 | **[free-ai-prompts](https://github.com/enzoemir1/free-ai-prompts)** | 90 free AI prompts across 9 categories — use them in the OpenAI nodes of these workflows. |
